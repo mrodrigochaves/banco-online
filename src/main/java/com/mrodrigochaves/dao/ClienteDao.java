@@ -5,6 +5,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.List;
+
+import com.mrodrigochaves.bean.Cliente;
 
 public class ClienteDao {
     
@@ -20,8 +23,8 @@ public class ClienteDao {
         return conn;
     }
 
-    public static List<Usuario> getAllUsuarios(){
-        List<Usuario> list = new ArrayList<Usuario>();
+    public static List<Cliente> getAllUsuarios(){
+        List<Cliente> list = new ArrayList<Cliente>();
 
         try {
             Connection conn = getConnection();
@@ -29,7 +32,7 @@ public class ClienteDao {
             ResultSet rs = ps.executeQuery();
 
             while(rs.next()) {
-                Usuario usuario = new Usuario();
+                Cliente usuario = new Cliente();
                 usuario.setId(rs.getInt("id"));
                 usuario.setName(rs.getString("name"));
                 usuario.setLogin(rs.getString("login"));
