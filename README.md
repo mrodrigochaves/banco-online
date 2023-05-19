@@ -18,3 +18,4 @@ Registro e exibição de transações: O sistema manterá um registro das transa
 
 ### Referências
 
+![Exemplo do Projeto]("/Online-Banking-System_1.jpg")
