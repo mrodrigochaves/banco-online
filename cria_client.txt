@@ -1,0 +1,17 @@
+CREATE TABLE IF NOT EXISTS `client` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,  
+  `login` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
+
+--
+-- Dumping data for table `client`
+--
+
+INSERT INTO `client` (`id`, `name`, `password`, `login`) VALUES
+(02, 'Benjamin', '1234', 'ben10@gmail.com'),
+(07, 'Aarão', '1234','aapimentel@gmail.com'),
+(09, 'Marcio', '1234', 'mrodrigochaves@gmail.com');
+(12, 'Elis', '1234', 'elis@gmail.com');
