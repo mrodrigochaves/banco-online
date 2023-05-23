@@ -13,18 +13,18 @@
             Login : <input type="text" name="login"><br/><br/>
             Password : <input type="password" name ="password"><br/>
                 <input type ="submit" value="Logar">    
-        </form>
-        
+        </form>    
         
         <%@ page import="com.mrodrigochaves.dao.ClienteDao" %>
         <%@ page import="com.mrodrigochaves.bean.Cliente" %>
         <%
-            String login = request.getParameter("login");
-            String password = request.getParameter("password");
-            Cliente client = ClienteDao.getValidateLogin(login,password);
-            
-        %>
-
-       
+    		// Obtém os parâmetros "login" e "password" da requisição
+    		String login = request.getParameter("login");
+    		String password = request.getParameter("password");
+    
+    		// Chama o método getValidateLogin da classe ClienteDao para autenticar o login
+    		Cliente client = ClienteDao.getValidateLogin(login, password);
+		%>
+        
 </body>
 </html>
