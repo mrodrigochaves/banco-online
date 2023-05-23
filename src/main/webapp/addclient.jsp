@@ -1,14 +1,18 @@
-<%@page import="com.mrodrigochaves.dao.ClienteDao" %>
+<%@page import="com.mrodrigochaves.dao.ClienteDao"%>
 <jsp:useBean id="c" class="com.mrodrigochaves.bean.Cliente"></jsp:useBean>
-<jsp:setProperty property="*" name="c"/>
+<jsp:setProperty property="*" name="c" />
 
 
 <%
-	int i = ClienteDao.saveClient(c);
+// Chama o método saveClient para salvar o cliente
+int i = ClienteDao.saveClient(c);
 
-	if(i > 0){
-		response.sendRedirect("addclient-success.jsp");
-	}else{
-		response.sendRedirect("addclient-error.jsp");
-	}
+// Verifica se o resultado da operação de salvamento foi bem-sucedido
+if (i > 0) {
+	// Redireciona para a página "addclient-success.jsp" em caso de sucesso
+	response.sendRedirect("addclient-success.jsp");
+} else {
+	// Redireciona para a página "addclient-error.jsp" em caso de erro
+	response.sendRedirect("addclient-error.jsp");
+}
 %>
