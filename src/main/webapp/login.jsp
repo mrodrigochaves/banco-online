@@ -22,7 +22,7 @@
     		String login = request.getParameter("login");
     		String password = request.getParameter("password");
     
-    		// Chama o método getValidateLogin da classe ClienteDao para autenticar o login
+    		// Chama o método getValidateLogin para autenticar o login
     		Cliente client = ClienteDao.getValidateLogin(login, password);
 		%>
         

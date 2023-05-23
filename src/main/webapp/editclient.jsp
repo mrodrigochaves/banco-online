@@ -14,7 +14,7 @@
 	//Obtém o parâmetro "id" da requisição
 	String id = request.getParameter("id");
 	
-	//Chama o método getRegisterById da classe ClienteDao para obter o cliente com base no ID fornecido
+	//Chama o método getRegisterById com ID
 	// Converte o ID de String para Integer usando Integer.parseInt()
 	Cliente client = ClienteDao.getRegisterById(Integer.parseInt(id));
 	%>
